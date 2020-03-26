@@ -26,4 +26,4 @@ The [output](output) file has the output pickle files:
 
 **imutils** is a very useful package which has a series of functions to make basic image processing operations like resizing and rotation with OpenCV and Python. You can find it [here](https://github.com/jrosebr1/imutils)
 
-Thanks to Adrian Rosebrick's tutorial on [PyImageSearch](https://www.pyimagesearch.com/) which helped me get familiar with face detection and face recognition.
+Thanks to Adrian Rosebrock's tutorial on [PyImageSearch](https://www.pyimagesearch.com/) which helped me get familiar with face detection and face recognition.
