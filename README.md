@@ -14,14 +14,14 @@ The [face detection model](face_detection_model) contains a pre-trained Caffe de
 It detects and localises the faces in the video.
 
 The [output](output) file has the output pickle files:
-- [embeddings.pickle](embeddings.pickle) has the serialized facial embeddings computed by [extract_embeddings.py](extract_embeddings.py).
-- [le.pickle](le.pickle) has label encoding for the people that the model can recognize.
-- [recognizer.pickle](recognizer.pickle) is the Linear Support Vector Model (SVM) which recognizes the faces.
+- [output/embeddings.pickle](embeddings.pickle) has the serialized facial embeddings computed by [extract_embeddings.py](extract_embeddings.py).
+- [output/le.pickle](le.pickle) has label encoding for the people that the model can recognize.
+- [output/recognizer.pickle](recognizer.pickle) is the Linear Support Vector Model (SVM) which recognizes the faces.
 
 [openface_nn4.small2.v1.t7](openface_nn4.small2.v1.t7) is a Torch deep learning model which produces the 128-D facial embeddings.
 
 [train_model.py](train_model.py) is the script which trains our Linear SVM model.
 
-[recognize_video_file.py](recognize_video_file) uses imultils' VideoFileStream to open the video file and then uses the output from the embeddings and training model to recognize the faces.
+[recognize_video_file.py](recognize_video_file.py) uses imultils' VideoFileStream to open the video file and then uses the output from the embeddings and training model to recognize the faces.
 
 **imutils** is a very useful package which has a series of functions to make basic image processing operations like resizing and rotation with OpenCV and Python. You can find it [here](https://github.com/jrosebr1/imutils)
