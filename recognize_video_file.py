@@ -41,8 +41,9 @@ embedder = cv2.dnn.readNetFromTorch(args["embedding_model"])
 recognizer = pickle.loads(open(args["recognizer"], "rb").read())
 le = pickle.loads(open(args["le"], "rb").read())
 
-# initialize the video stream, then allow the camera sensor to warm up
+# initialize the video stream by loading the file
 print("[INFO] starting video stream...")
+#Specify the path of the video file
 vs = FileVideoStream("G:/face detection/face-recognition-opencv/videos/lunch_scene.mp4").start()
 time.sleep(2.0)
 
@@ -121,7 +122,7 @@ while True:
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
-	# if the `q` key was pressed, break from the loop
+	# if`q` key was pressed, break from the loop
 	if key == ord("q"):
 		break
 
@@ -130,6 +131,6 @@ fps.stop()
 print("[INFO] elasped time: {:.2f}".format(fps.elapsed()))
 print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
 
-# do a bit of cleanup
+# cleanup
 cv2.destroyAllWindows()
 vs.stop()
