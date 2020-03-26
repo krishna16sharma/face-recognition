@@ -14,9 +14,9 @@ The [face detection model](face_detection_model) contains a pre-trained Caffe de
 It detects and localises the faces in the video.
 
 The [output](output) file has the output pickle files:
-- [output/embeddings.pickle](embeddings.pickle) has the serialized facial embeddings computed by [extract_embeddings.py](extract_embeddings.py).
-- [output/le.pickle](le.pickle) has label encoding for the people that the model can recognize.
-- [output/recognizer.pickle](recognizer.pickle) is the Linear Support Vector Model (SVM) which recognizes the faces.
+- [embeddings.pickle](output/embeddings.pickle) has the serialized facial embeddings computed by [extract_embeddings.py](extract_embeddings.py).
+- [le.pickle](output/le.pickle) has label encoding for the people that the model can recognize.
+- [recognizer.pickle](output/recognizer.pickle) is the Linear Support Vector Model (SVM) which recognizes the faces.
 
 [openface_nn4.small2.v1.t7](openface_nn4.small2.v1.t7) is a Torch deep learning model which produces the 128-D facial embeddings.
 
