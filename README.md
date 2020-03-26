@@ -25,3 +25,5 @@ The [output](output) file has the output pickle files:
 [recognize_video_file.py](recognize_video_file.py) uses imultils' VideoFileStream to open the video file and then uses the output from the embeddings and training model to recognize the faces.
 
 **imutils** is a very useful package which has a series of functions to make basic image processing operations like resizing and rotation with OpenCV and Python. You can find it [here](https://github.com/jrosebr1/imutils)
+
+Thanks to Adrian Rosebrick's tutorial on [PyImageSearch](https://www.pyimagesearch.com/) which helped me get familiar with face detection and face recognition.
